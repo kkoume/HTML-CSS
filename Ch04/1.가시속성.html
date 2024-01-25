@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1.가시속성</title>
+    <!--
+        날짜 : 2024/01/24
+        이름 : 조영흥
+        내용 : 가시속성 실습하기
+    -->
+    <style>
+        span { background: orange; }
+        div > div { background: green; }
+
+        .box1 > span:nth-child(1) { display: none; }            /* 자리 공간까지 사라짐 */
+        .box1 > span:nth-child(2) { visibility: hidden; }       /* 글자만 사라짐 */
+        .box1 > span:nth-child(3) { opacity: 0.1; }             /* 0에 가까울 수록 투명해지고 1에 가까울 수록 선명해짐. */
+
+        .box2 > span:nth-child(2) { display: block;}
+        .box3 > div { 
+            display: inline; 
+            width: 100px;
+            height: 100px;
+        }
+        .box4 > div {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <h3>1.가시속성</h3>
+
+    <h4>display:none</h4>
+    <div class="box1">
+        <span>SPAN1</span>
+        <span>SPAN2</span>
+        <span>SPAN3</span>
+    </div>
+
+    <h4>display:block</h4>
+    <div class="box2">
+        <span>SPAN1</span>
+        <span>SPAN2</span>
+        <span>SPAN3</span>
+    </div>
+
+    <h4>display:inline</h4>
+    <div class="box3">
+        <span>SPAN1</span>
+        <div>DIV2</div>
+        <span>SPAN3</span>
+    </div>
+
+    <h4>display:inline-block</h4>
+    <div class="box4">
+        <span>SPAN1</span>
+        <div>DIV2</div>
+        <span>SPAN3</span>
+    </div>
+
+</body>
+</html>
