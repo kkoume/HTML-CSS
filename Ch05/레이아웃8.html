@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃8</title>
+    <!--
+        날짜 : 2024/01/26
+        이름 : 조영흥
+        내용 : 레이아웃 실습8
+    -->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        ul, 
+        ol {
+            list-style: none;
+        }
+
+        a {
+          text-decoration: none;
+          color: #111;
+        }
+
+        
+        #container {
+            width: 860px;
+            height: auto;
+            background: #fff;
+            border: 1px solid black;
+            padding: 10px;
+            box-sizing: border-box;
+            margin: 0 auto;
+        }
+        
+        /* header */
+        header {
+            position: relative;
+            width: 100%;
+            height: 120px;
+            background: #eee;
+            border: 1px dashed black;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        header > nav {
+            position: absolute;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            width: auto;
+            height: 50px;
+            background: #ddd;
+            border: 1px dashed black;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        /* main */
+        main {
+            overflow: hidden;
+            width: 100%;
+            height: auto;
+            background: #eee;
+            border: 1px dashed black;
+            padding: 10px;
+            box-sizing: border-box;
+            margin: 10px 0;
+        }
+
+        main > p {
+            margin-bottom: 10px;
+        }
+
+        main > nav {
+            width: 100%;
+            height: 50px;
+            background: #ddd;
+            border: 1px dashed black;
+            padding: 10px;
+            box-sizing: border-box;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .flexbox {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .flexbox > aside {
+            width: 198px;
+            height: 400px;
+            background-color: #ddd;
+            border: 1px dashed black;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .flexbox > section {
+            
+            width: 400px;
+            height: 400px;
+            background-color: #ddd;
+            border: 1px dashed black;
+            padding: 10px;
+            box-sizing: border-box;
+            margin: 0 10px;
+        }
+
+        section > article {
+            width: 100%;
+            height: 168px;
+            background-color: #ccc;
+            border: 1px dashed black;
+            padding: 10px;
+            box-sizing: border-box;
+            margin-top: 10px;
+        }
+
+
+        /* footer */
+        footer {
+            width: 100%;
+            height: 100px;
+            background: #eee;
+            border: 1px dashed black;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <header>
+            header
+            <nav>nav</nav>
+        </header>
+        <main>
+            main
+            <nav>nav</nav>
+            <div class="flexbox">
+                <aside>aside #1</aside>
+                <section>
+                    section
+                    <article>article #1</article>
+                    <article>article #2</article>
+                </section>
+                <aside>aside #2</aside>
+            </div>
+        </main>
+        <footer>footer</footer>
+    </div>
+</body>
+</html>
